@@ -29,6 +29,9 @@ RUN curl -O https://artifacts.elastic.co/downloads/packs/x-pack/${XPACK_PACKAGE}
       file:///tmp/${XPACK_PACKAGE} \
  && rm -f ${XPACK_PACKAGE}
 
+###############################################################################
+#                                KIBANA PLUGINS
+###############################################################################
 RUN /opt/kibana/bin/kibana-plugin install https://github.com/sirensolutions/sentinl/releases/download/tag-6.2.3/sentinl-v6.2.3.zip
 
 
